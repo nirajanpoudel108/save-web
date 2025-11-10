@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="template" client="site">
+	<name>abc</name>
+	<version>1.0</version>
+	<creationDate>2017-02</creationDate>
+	<author>Joomla! Project</author>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<copyright>(C) 2017 Open Source Matters, Inc.</copyright>
+	<description>TPL_CASSIOPEIA_XML_DESCRIPTION</description>
+	<inheritable>1</inheritable>
+	<files>
+		
+		<filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+
+	</files>
+	<media destination="templates/abc" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>scss</folder>
+		<folder>images</folder>
+		
+        <folder>css</folder>
+        <folder>html</folder>
+	</media>
+	<positions>
+		<position>topbar</position>
+		<position>below-top</position>
+		<position>menu</position>
+		<position>search</position>
+		<position>banner</position>
+		<position>top-a</position>
+		<position>top-b</position>
+		<position>main-top</position>
+		<position>main-bottom</position>
+		<position>breadcrumbs</position>
+		<position>sidebar-left</position>
+		<position>sidebar-right</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>footer</position>
+		<position>debug</position>
+		<!-- used directly in the error.php and included here so the position will appear in the list of available positions -->
+		<position>error-403</position>
+		<position>error-404</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/tpl_cassiopeia.ini</language>
+		<language tag="en-GB">en-GB/tpl_cassiopeia.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field
+					name="brand"
+					type="radio"
+					label="TPL_CASSIOPEIA_BRAND_LABEL"
+					default="1"
+					layout="joomla.form.field.radio.switcher"
+					filter="options"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field
+					name="logoFile"
+					type="media"
+					schemes="http,https,ftp,ftps,data,file"
+					validate="url"
+					relative="true"
+					default=""
+					label="TPL_CASSIOPEIA_LOGO_LABEL"
+					showon="brand:1"
+				/>
+
+				<field
+					name="siteTitle"
+					type="text"
+					default=""
+					label="TPL_CASSIOPEIA_TITLE"
+					filter="string"
+					showon="brand:1"
+				/>
+
+				<field
+					name="siteDescription"
+					type="text"
+					default=""
+					label="TPL_CASSIOPEIA_TAGLINE_LABEL"
+					description="TPL_CASSIOPEIA_TAGLINE_DESC"
+					filter="string"
+					showon="brand:1"
+				/>
+
+				
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
