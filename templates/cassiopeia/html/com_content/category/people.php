@@ -10,16 +10,6 @@ use Joomla\Registry\Registry;
 $doc = Joomla\CMS\Factory::getDocument();
 $doc->addStyleSheet('templates/your_template/css/blog-default.css');
 
-if ($this->category->id == 10) {
-
-    include 'people.php';
-    return;
-}
-if ($this->category->id == 9) {
-
-    include 'grid.php';
-    return;
-}
 
 if (!empty($this->items)) :
 ?>
@@ -36,12 +26,13 @@ if (!empty($this->items)) :
         // Clean intro text
         $introtext = strip_tags($item->introtext);
     ?>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-3 col-sm-6">
             <div class="card h-100 shadow-sm border-0">
                 <?php if ($image): ?>
                     <a href="<?php echo $itemLink; ?>">
                         <img src="<?php echo htmlspecialchars($image, ENT_QUOTES, 'UTF-8'); ?>" 
                              class="card-img-top rounded-top" 
+                             style="width:346px; height: 311px"
                              alt="<?php echo htmlspecialchars($item->title, ENT_QUOTES, 'UTF-8'); ?>">
                     </a>
                 <?php endif; ?>

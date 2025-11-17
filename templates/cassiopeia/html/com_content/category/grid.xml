@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Grid Layout (3 Columns)">
+        <help key="Menu_Item:_Category_Blog" />
+        <message>Displays category items in a Bootstrap grid layout.</message>
+    </layout>
+</metadata>
