@@ -10,8 +10,7 @@
 
     // Loop through items
     foreach ($rss->channel->item as $i=>$item) {
-    	echo $i;
-        echo "<div style='margin-bottom:20px;'>";
+        echo "<div style='margin-bottom:10px;'>";
         echo "<h5><a href='{$item->link}' target='_blank'>{$item->title}</a></h5>";
 
         // Description
