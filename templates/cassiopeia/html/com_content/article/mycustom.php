@@ -9,7 +9,10 @@
     }
 
     // Loop through items
+    $a = 1;
     foreach ($rss->channel->item as $i=>$item) {
+        echo $a;
+        $a++;
         echo "<div style='margin-bottom:10px;'>";
         echo "<h5><a href='{$item->link}' target='_blank'>{$item->title}</a></h5>";
 
@@ -30,10 +33,7 @@
 
         }
 
-        // Publication Date
-        if (!empty($item->pubDate)) {
-            echo "<small><strong>Published:</strong> {$item->pubDate}</small><br>";
-        }
+       
 
         echo "</div><hr>";
     }
