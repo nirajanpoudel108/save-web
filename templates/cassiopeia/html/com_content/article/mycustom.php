@@ -14,9 +14,10 @@
         $doiLink = "";
         $desc = html_entity_decode((string)$item->description);
         $title = trim((string)$item->title);
-
+        // var_dump($desc);
+        // die;
         if (preg_match('/https:\/\/doi\.org\/[^\s<"]+/', $desc, $match)) {
-            $doiLink = $match[0];
+            $doiLink = rtrim($match[0], ".> ");
         }
         $desc = preg_replace('/ORCID:\s*https?:\/\/orcid\.org\/[^\s<]+/i', '', $desc);
 
